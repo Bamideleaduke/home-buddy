@@ -41,11 +41,12 @@ export const GlobalTheme = createTheme(
       body1: {
         fontWeight: 500,
         fontSize: materialTheme.typography.pxToRem(16),
+       
       },
       body2: {
         fontWeight: 400,
         fontSize: materialTheme.typography.pxToRem(14),
-        color: Colors.TextGray,
+        color:Colors.TextGray,
       },
       caption: {
         fontWeight: 400,

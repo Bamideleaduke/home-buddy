@@ -28,3 +28,15 @@ export const sponsors = [
     {id:"1",text:"airbnb",icon:"/airbnb.svg"},
     {id:"1",text:"google",icon:"/google.svg"},
 ]
+export const offers : OfferType[] = [
+    {id:"1",title:"Budget Friendly",text:"We provides a complete service for the sale, purchase or rental of real estate.",icon:"/moneyBagIcon.svg"},
+    {id:"1",title:"Property Insurance",text:"We provides a complete service for the sale, purchase or rental of real estate.",icon:"/authorizeIcon.svg"},
+    {id:"1",title:"Lowest commission",text:"We provides a complete service for the sale, purchase or rental of real estate.",icon:"/commissionIcon.svg"},
+    
+]
+export interface OfferType {
+    id: string;
+    title: string;
+    text: string;
+    icon: string;
+  }

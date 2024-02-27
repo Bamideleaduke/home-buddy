@@ -8,7 +8,7 @@ const Sponsors = () => {
     <Box
       sx={{
         width: { xs: "90%", md: "85%" },
-        margin: { xs: "3rem auto", md: "2rem auto" },
+        margin: { xs: "3rem auto", md: "5rem auto" },
       }}
     >
       <Typography
@@ -27,7 +27,6 @@ const Sponsors = () => {
         justifyContent="center"
         rowSpacing={2}
         columnSpacing={5}
-        //   sx={{ alignItems: "center", justifyContent: "center" }}
       >
         {sponsors.map((item) => {
           return (
@@ -37,7 +36,6 @@ const Sponsors = () => {
               xs={6}
               md={3}
 
-              //   sx={{ display: "flex", alignItems: "center" }}
             >
               <Image
                 src={item.icon}
