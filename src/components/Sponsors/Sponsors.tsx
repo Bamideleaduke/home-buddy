@@ -42,7 +42,7 @@ const Sponsors = () => {
                 alt={item.text}
                 width="100"
                 height="50"
-                style={{ width: "100%" }}
+              
               />
             </Grid>
           );

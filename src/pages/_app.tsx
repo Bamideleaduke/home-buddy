@@ -8,8 +8,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={GlobalTheme}>
        <CssBaseline />
       <Layout>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </Layout>
     </ThemeProvider>
-  );
+  )
 }

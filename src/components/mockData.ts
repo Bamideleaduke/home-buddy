@@ -17,21 +17,21 @@ export const footer = [
 
 export const socials = [
     {id:"1",text:"Instagram",icon:"/instagram.svg", link:""},
-    {id:"1",text:"LinkedIn",icon:"/linkedin.svg",link:""},
-    {id:"1",text:"Facebook",icon:"/facebook.svg",link:""},
-    {id:"1",text:"X",icon:"/twitter.svg",link:""},
+    {id:"2",text:"LinkedIn",icon:"/linkedin.svg",link:""},
+    {id:"3",text:"Facebook",icon:"/facebook.svg",link:""},
+    {id:"4",text:"X",icon:"/twitter.svg",link:""},
 ]
 
 export const sponsors = [
     {id:"1",text:"amazon",icon:"/amazon.svg"},
-    {id:"1",text:"microsoft",icon:"/microsoft.svg"},
-    {id:"1",text:"airbnb",icon:"/airbnb.svg"},
-    {id:"1",text:"google",icon:"/google.svg"},
+    {id:"2",text:"microsoft",icon:"/microsoft.svg"},
+    {id:"3",text:"airbnb",icon:"/airbnb.svg"},
+    {id:"4",text:"google",icon:"/google.svg"},
 ]
 export const offers : OfferType[] = [
     {id:"1",title:"Budget Friendly",text:"We provides a complete service for the sale, purchase or rental of real estate.",icon:"/moneyBagIcon.svg"},
-    {id:"1",title:"Property Insurance",text:"We provides a complete service for the sale, purchase or rental of real estate.",icon:"/authorizeIcon.svg"},
-    {id:"1",title:"Lowest commission",text:"We provides a complete service for the sale, purchase or rental of real estate.",icon:"/commissionIcon.svg"},
+    {id:"2",title:"Property Insurance",text:"We provides a complete service for the sale, purchase or rental of real estate.",icon:"/authorizeIcon.svg"},
+    {id:"3",title:"Lowest commission",text:"We provides a complete service for the sale, purchase or rental of real estate.",icon:"/commissionIcon.svg"},
     
 ]
 export interface OfferType {

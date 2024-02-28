@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import PropertyDisplay from "@/components/shared/Card/PropertyDisplay";
 import Sponsors from "@/components/Sponsors";
 import Offers from "@/components/Offers";
+import FeaturedProperty from "@/components/FeaturedProperty";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +21,9 @@ export default function Home() {
         <Hero />
         <Sponsors />
         <Offers />
-        <PropertyDisplay />
+        <FeaturedProperty/>
+        {/* <PropertyDisplay /> */}
       </main>
     </>
-  );
+  )
 }

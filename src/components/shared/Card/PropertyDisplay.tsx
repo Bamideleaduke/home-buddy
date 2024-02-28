@@ -2,13 +2,14 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
 import { Colors } from "@/components/colors";
+import { currencyConverter } from "@/Utils/helper/helper-function";
 
 const PropertyDisplay = () => {
   return (
     <Box
       sx={{
-        border: "2px solid red",
-        width: "300px",
+        // border: "2px solid red",
+        width: "100%",
         backgroundColor: Colors.OffWhite,
         padding: "1rem",
         borderRadius: "10px",
@@ -30,7 +31,7 @@ const PropertyDisplay = () => {
           color={Colors.BackroundOrTitle}
           sx={{ margin: "1rem 0" }}
         >
-          450,000
+          {currencyConverter(450000)}
         </Typography>
         <Typography variant="h3" sx={{ fontSize: "1.2rem" }}>
           Greenville Apartment

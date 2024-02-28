@@ -15,7 +15,7 @@ const Footer = () => {
         justify-content="center"
         align-items="center"
         sx={{
-          width: { md: "90%" },
+          width: { xs: "90%", md: "90%" },
           marginInline: "auto",
           padding: { md: "3rem 0 2rem" },
         }}
@@ -33,7 +33,7 @@ const Footer = () => {
             >
               158 Newtown Street, 100149 Ibadan, Oyo state. Nigeria
             </Typography>
-            <Box>
+            <Box sx={{ marginBottom: { xs: "1rem", md: "initial" } }}>
               {socials.map((item) => {
                 return (
                   <Image
@@ -50,14 +50,10 @@ const Footer = () => {
           </Box>
         </Grid>
         <Grid item md={5}>
-          <Grid
-            container
-            rowSpacing={3}
-            justify-content="space-between"
-          >
+          <Grid container rowSpacing={3} justify-content="space-between">
             {footer.map((item) => {
               return (
-                <Grid item key={item.id} md={4}>
+                <Grid item key={item.id} xs={6} md={4}>
                   <FooterLink
                     href={item.route}
                     sx={{ textDecoration: "none", color: Colors.OffWhite }}
