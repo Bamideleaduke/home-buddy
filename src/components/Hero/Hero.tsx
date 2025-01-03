@@ -18,7 +18,7 @@ const Hero = () => {
     <Box
       sx={{
         backgroundColor: "#fff",
-        height: "80vh",
+        height: {xs:"80vh",sm:"50vh", md:"80vh"},
       }}
     >
       <Box sx={HeroStyle.Container}>

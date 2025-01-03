@@ -32,10 +32,22 @@ const FeaturedProperty = () => {
             We have properties for sale in different locations
           </Typography>
         </Box>
-        <Grid container gap={7} rowGap={6}>
+        <Grid container 
+          // gap={7} 
+          rowGap={6}
+        justifyContent="space-between"
+        sx={{ margin: "2rem 0", columnGap: { sm: 1 } }}
+
+        
+        >
           {[1, 2, 3, 4, 5, 6].map((item) => {
             return (
-              <Grid item key={item} sm={3.3} md={3.5}>
+              <Grid item key={item} 
+              // sm={4} md={3.4}
+              xs={12}
+              sm={5}
+             md={3.5}
+              >
                 <PropertyDisplay />
               </Grid>
             );

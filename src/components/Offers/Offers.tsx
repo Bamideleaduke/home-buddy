@@ -37,11 +37,11 @@ const Offers = () => {
             </Box>
             <Grid
               container
-              gap={2}
+              // gap={2}
               rowGap={6}
               justifyContent="space-between"
-              margin={"4rem auto"}
-              width={"100%"}
+              margin={"4rem 0"}
+              // width={"100%"}
               sx={
                 {
                   // gap: "2",
@@ -49,7 +49,7 @@ const Offers = () => {
               }
             >
               {offers.map((offer) => (
-                <Grid item key={offer.id} md={3.5}>
+                <Grid item key={offer.id} xs={12} md={3.5}>
                   <OfferCard item={offer} />
                 </Grid>
               ))}

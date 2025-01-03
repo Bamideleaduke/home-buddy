@@ -14,12 +14,12 @@ import {
   ListItemButton,
   ListItemText,
   Drawer,
-  Typography
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 import { Colors } from "../colors";
 import CustomButton from "../shared/Button/CustomButton";
+import { useRouter } from "next/router";
 
 interface Props {
   window?: () => Window;
@@ -27,7 +27,7 @@ interface Props {
 }
 interface HideOnScrollProps {
   window?: () => Window;
-  children: React.ReactElement<any,any>;
+  children: React.ReactElement<any, any>;
 }
 
 function HideOnScroll(props: HideOnScrollProps) {
@@ -38,7 +38,6 @@ function HideOnScroll(props: HideOnScrollProps) {
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
   });
-
   return (
     <Slide appear={false} direction="down" in={!trigger}>
       {children}
@@ -46,13 +45,20 @@ function HideOnScroll(props: HideOnScrollProps) {
   );
 }
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+// const navItems = ["Home", "About", "Contact"];
+const navItems = [
+  { id: "001", title: "Home", href: "/" },
+  { id: "002", title: "About", href: "/about-us" },
+  { id: "003", title: "Contact", href: "/contact-us" },
+];
 export default function Header(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+  const navigate = useRouter();
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Box sx={{ position: "relative" }}>
@@ -63,9 +69,9 @@ export default function Header(props: Props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.id} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item.title} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -78,62 +84,32 @@ export default function Header(props: Props) {
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar sx={{  boxShadow: "0", background: Colors.White, }}>
+        <AppBar
+          sx={{
+            boxShadow: "0",
+            background: Colors.White,
+            maxWidth: "1283px",
+            //   marginInline: "auto",
+            right: "auto",
+          }}
+        >
           <Toolbar
             sx={{
-              width:{xs:"90%", sm:"85%", lg:"82%"},
+              width: { xs: "95%", sm: "95%", lg: "90%" },
               // width: { md: "90%" },
-               marginInline:"auto",
-              border:"2px solid red",
+              marginInline: "auto",
+              //   border:"2px solid red",
+              //   justifyContent:"space-between"
               // marginInline: { md: "auto" },
               // maxWidth: {md:"1183px"}, marginInline:"auto",
             }}
           >
             {/* <Toolbar /> */}
+
             <Box
               sx={{
                 flexGrow: 1,
-                display: { xs: "block", sm: "none" },
-                position: "relative",
-              }}
-            >
-              <Image
-                src="/brandLogo.svg"
-                alt="Logo"
-                width="150"
-                height="100"
-                // layout="fill" // or layout="responsive"
-                // objectFit="contain"
-              />
-            </Box>
-            <Box  
-            sx={{  position: "relative", flexGrow: 1, display: { xs: 'block', sm: 'none' }, color:"red" }}
-            
-            >
-             <IconButton
-              //   color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
-            >
-              <MenuIcon sx={{ fontSize: "2rem" }} />
-            </IconButton>
-            </Box>
-            {/* <IconButton
-              //   color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
-            >
-              <MenuIcon sx={{ fontSize: "2rem" }} />
-            </IconButton> */}
-          
-            <Box
-              sx={{
-                flexGrow: 1,
-                display: { xs: "none", sm: "block" },
+                // display: { xs: "block", sm: "none" },
                 position: "relative",
               }}
             >
@@ -155,8 +131,12 @@ export default function Header(props: Props) {
               }}
             >
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: Colors.Primary }}>
-                  {item}
+                <Button
+                  key={item.id}
+                  sx={{ color: Colors.Primary }}
+                  onClick={() => navigate.push(item.href)}
+                >
+                  {item.title}
                 </Button>
               ))}
             </Box>
@@ -167,12 +147,21 @@ export default function Header(props: Props) {
               <CustomButton variant="outlined">Login</CustomButton>
             </Box>
 
-        
+            <Box sx={{ display: { xs: "flex", sm: "none" } }}>
+              <IconButton
+                //   color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ display: { sm: "none" } }}
+              >
+                <MenuIcon sx={{ fontSize: "2rem" }} />
+              </IconButton>
+            </Box>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
       <nav>
-  
         <Drawer
           container={container}
           variant="temporary"

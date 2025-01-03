@@ -11,6 +11,7 @@ export const Colors = {
     LightBackround: "#F4F2FF",
     Secondary: "#272727",
     Primary: "#000000",
+    OffWhite2:"#F8F7FC",
     // Primary: "#424242",
     Grey:"#D6D5D5",
     TextGray: "#828282",
