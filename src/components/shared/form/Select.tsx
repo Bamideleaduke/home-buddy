@@ -10,7 +10,7 @@ interface CustomSelectProps {
   options: { label: string; value: string | number }[];
   onChange: (event: SelectChangeEvent) => void;
   placeholder?: string;
-  sx?: object; // To allow custom styles
+  sx?: object; 
 }
 
 const CustomSelect: React.FC<CustomSelectProps> = ({
