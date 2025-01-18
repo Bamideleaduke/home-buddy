@@ -45,10 +45,10 @@ function HideOnScroll(props: HideOnScrollProps) {
   );
 }
 const drawerWidth = 240;
-// const navItems = ["Home", "About", "Contact"];
 const navItems = [
   { id: "001", title: "Home", href: "/" },
   { id: "002", title: "About", href: "/about-us" },
+  { id: "003", title: "Properties", href: "/properties" },
   { id: "003", title: "Contact", href: "/contact-us" },
 ];
 export default function Header(props: Props) {
@@ -69,9 +69,13 @@ export default function Header(props: Props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item.id} disablePadding>
+          <ListItem
+            key={item.id}
+            disablePadding
+            onClick={() => navigate.push(item.href)}
+          >
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item.title} />
+              <ListItemText primary={item.title.toLowerCase()} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -133,10 +137,10 @@ export default function Header(props: Props) {
               {navItems.map((item) => (
                 <Button
                   key={item.id}
-                  sx={{ color: Colors.Primary }}
+                  sx={{ color: Colors.Primary, textTransform: "capitalize" }}
                   onClick={() => navigate.push(item.href)}
                 >
-                  {item.title}
+                  {item.title.toLowerCase()}
                 </Button>
               ))}
             </Box>

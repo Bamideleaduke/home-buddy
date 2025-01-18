@@ -1,12 +1,5 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-// import Hero from "@/components/Hero";
-// import Sponsors from "@/components/Sponsors";
-// import Offers from "@/components/Offers";
-// import FeaturedProperty from "@/components/FeaturedProperty";
-// import Testimonial from "@/components/Testimonial";
-// import PopularProject from "@/components/PopularProject";
-// import Subscribe from "@/components/Subscribe";
 import Dashboard from "./dashboard";
 
 const inter = Inter({ subsets: ["latin"] });

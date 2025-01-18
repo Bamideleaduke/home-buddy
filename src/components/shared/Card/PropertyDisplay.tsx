@@ -1,10 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import Image from "next/image";
 import { Colors } from "@/components/colors";
 import { currencyConverter } from "@/Utils/helper/helper-function";
+import { useRouter } from "next/router";
 
-const PropertyDisplay = () => {
+const PropertyDisplay = ({ data }: any) => {
+  const router = useRouter();
   return (
     <Box
       sx={{
@@ -14,12 +15,13 @@ const PropertyDisplay = () => {
         padding: "1rem",
         borderRadius: "10px",
       }}
+      onClick={() => router.push(`/properties/${data.id}`)}
     >
       <Box>
         <Box
           component="img"
-          src="/property.svg"
-          alt=""
+          src={data?.image}
+          alt={data?.title}
           sx={{ width: "100%" }}
         />
         {/* <Image src="/property.svg" alt="Logo" width="100" height="100" /> */}
@@ -31,16 +33,14 @@ const PropertyDisplay = () => {
           color={Colors.BackroundOrTitle}
           sx={{ margin: "1rem 0" }}
         >
-          {currencyConverter(450000)}
+          {currencyConverter(data?.price)}
         </Typography>
         <Typography variant="h3" sx={{ fontSize: "1.2rem" }}>
-          Greenville Apartment
+          {data?.title}
         </Typography>
-        <Typography variant="body2">
-          12, Adeniran Street, Ikoyi, Lagos
-        </Typography>
+        <Typography variant="body2">{data?.address}</Typography>
         <Box sx={{ display: "flex", marginTop: "1rem" }}>
-          {["beds", "baths", "park"].map((item) => (
+          {data?.features.map((item: any) => (
             <Typography
               key={item}
               variant="body2"

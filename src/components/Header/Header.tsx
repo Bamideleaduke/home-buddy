@@ -14,7 +14,7 @@ import {
   ListItemButton,
   ListItemText,
   Drawer,
-  Typography
+  Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
@@ -27,7 +27,7 @@ interface Props {
 }
 interface HideOnScrollProps {
   window?: () => Window;
-  children: React.ReactElement<any,any>;
+  children: React.ReactElement<any, any>;
 }
 
 function HideOnScroll(props: HideOnScrollProps) {
@@ -78,13 +78,13 @@ export default function Header(props: Props) {
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar sx={{  boxShadow: "0", background: Colors.White, }}>
+        <AppBar sx={{ boxShadow: "0", background: Colors.White }}>
           <Toolbar
             sx={{
-              width:{xs:"90%", sm:"85%", lg:"82%"},
+              width: { xs: "90%", sm: "85%", lg: "82%" },
               // width: { md: "90%" },
-               marginInline:"auto",
-              border:"2px solid red",
+              marginInline: "auto",
+              border: "2px solid red",
               // marginInline: { md: "auto" },
               // maxWidth: {md:"1183px"}, marginInline:"auto",
             }}
@@ -106,19 +106,23 @@ export default function Header(props: Props) {
                 // objectFit="contain"
               />
             </Box>
-            <Box  
-            sx={{  position: "relative", flexGrow: 1, display: { xs: 'block', sm: 'none' }, color:"red" }}
-            
+            <Box
+              sx={{
+                position: "relative",
+                flexGrow: 1,
+                display: { xs: "block", sm: "none" },
+                color: "red",
+              }}
             >
-             <IconButton
-              //   color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
-            >
-              <MenuIcon sx={{ fontSize: "2rem" }} />
-            </IconButton>
+              <IconButton
+                //   color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2, display: { sm: "none" } }}
+              >
+                <MenuIcon sx={{ fontSize: "2rem" }} />
+              </IconButton>
             </Box>
             {/* <IconButton
               //   color="inherit"
@@ -129,7 +133,7 @@ export default function Header(props: Props) {
             >
               <MenuIcon sx={{ fontSize: "2rem" }} />
             </IconButton> */}
-          
+
             <Box
               sx={{
                 flexGrow: 1,
@@ -156,7 +160,7 @@ export default function Header(props: Props) {
             >
               {navItems.map((item) => (
                 <Button key={item} sx={{ color: Colors.Primary }}>
-                  {item}
+                  {item.toLowerCase()}
                 </Button>
               ))}
             </Box>
@@ -166,13 +170,10 @@ export default function Header(props: Props) {
               </CustomButton>
               <CustomButton variant="outlined">Login</CustomButton>
             </Box>
-
-        
           </Toolbar>
         </AppBar>
       </HideOnScroll>
       <nav>
-  
         <Drawer
           container={container}
           variant="temporary"
