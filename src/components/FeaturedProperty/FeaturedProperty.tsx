@@ -16,7 +16,6 @@ const FeaturedProperty = () => {
       <Box
         sx={{
           margin: "5rem 0 0",
-          //   border: "2px solid red"
         }}
       >
         <Box
@@ -35,7 +34,6 @@ const FeaturedProperty = () => {
         </Box>
         <Grid
           container
-          // gap={7}
           rowGap={6}
           justifyContent="space-between"
           sx={{ margin: "2rem 0", columnGap: { sm: 1 } }}
@@ -45,7 +43,6 @@ const FeaturedProperty = () => {
               <Grid
                 item
                 key={item.id}
-                // sm={4} md={3.4}
                 xs={12}
                 sm={5}
                 md={3.5}

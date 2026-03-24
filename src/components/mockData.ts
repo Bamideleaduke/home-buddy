@@ -106,7 +106,6 @@ export const reviews = [
   },
 ];
 
-// About
 export const whatWeDo = [
   {
     id: "1",
@@ -162,6 +161,9 @@ export const properties = [
     address: "12, Adeniran Street, Ikoyi, Lagos",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "duplex",
+    location: "lagos",
+    type: "buy",
     propImg: [
       {
         propFront: "/properties/property1front.svg",
@@ -177,6 +179,9 @@ export const properties = [
     address: "15, Banana Island, Lagos",
     features: ["5 beds", "3 baths", "garage"],
     image: "/property.svg",
+    propertyType: "2-storey",
+    location: "lagos",
+    type: "buy",
     propImg: [
       {
         propFront: "/properties/property1front.svg",
@@ -192,6 +197,9 @@ export const properties = [
     address: "8, Adeola Odeku, VI, Lagos",
     features: ["1 bed", "1 bath", "no parking"],
     image: "/property.svg",
+    propertyType: "duplex",
+    location: "lagos",
+    type: "buy",
   },
   {
     id: 4,
@@ -200,6 +208,9 @@ export const properties = [
     address: "4, Example Street, City 4, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "2-storey",
+    location: "kogi",
+    type: "buy",
   },
   {
     id: 5,
@@ -208,6 +219,9 @@ export const properties = [
     address: "5, Example Street, City 5, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "duplex",
+    location: "kogi",
+    type: "buy",
   },
   {
     id: 6,
@@ -216,6 +230,9 @@ export const properties = [
     address: "6, Example Street, City 6, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "2-storey",
+    location: "kogi",
+    type: "buy",
   },
   {
     id: 7,
@@ -224,6 +241,9 @@ export const properties = [
     address: "7, Example Street, City 7, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "duplex",
+    location: "lagos",
+    type: "buy",
   },
   {
     id: 8,
@@ -232,6 +252,9 @@ export const properties = [
     address: "8, Example Street, City 8, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "2-storey",
+    location: "lagos",
+    type: "buy",
   },
   {
     id: 9,
@@ -240,6 +263,9 @@ export const properties = [
     address: "9, Example Street, City 9, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "2-storey",
+    location: "kogi",
+    type: "buy",
   },
   {
     id: 10,
@@ -248,6 +274,9 @@ export const properties = [
     address: "10, Example Street, City 10, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "2-storey",
+    location: "kogi",
+    type: "buy",
   },
   {
     id: 11,
@@ -256,6 +285,9 @@ export const properties = [
     address: "11, Example Street, City 11, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "duplex",
+    location: "lagos",
+    type: "buy",
   },
   {
     id: 12,
@@ -264,6 +296,9 @@ export const properties = [
     address: "12, Example Street, City 12, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "2-storey",
+    location: "kogi",
+    type: "buy",
   },
   {
     id: 13,
@@ -272,6 +307,9 @@ export const properties = [
     address: "13, Example Street, City 13, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "2-storey",
+    location: "kogi",
+    type: "buy",
   },
   {
     id: 14,
@@ -280,6 +318,9 @@ export const properties = [
     address: "14, Example Street, City 14, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "2-storey",
+    location: "lagos",
+    type: "buy",
   },
   {
     id: 15,
@@ -288,6 +329,9 @@ export const properties = [
     address: "15, Example Street, City 15, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "2-storey",
+    location: "lagos",
+    type: "buy",
   },
   {
     id: 16,
@@ -296,6 +340,9 @@ export const properties = [
     address: "16, Example Street, City 16, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "duplex",
+    location: "kogi",
+    type: "buy",
   },
   {
     id: 17,
@@ -304,6 +351,9 @@ export const properties = [
     address: "17, Example Street, City 17, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "duplex",
+    location: "lagos",
+    type: "buy",
   },
   {
     id: 18,
@@ -312,6 +362,9 @@ export const properties = [
     address: "18, Example Street, City 18, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "2-storey",
+    location: "kogi",
+    type: "buy",
   },
   {
     id: 19,
@@ -320,6 +373,9 @@ export const properties = [
     address: "19, Example Street, City 19, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "2-storey",
+    location: "kogi",
+    type: "buy",
   },
   {
     id: 20,
@@ -328,6 +384,9 @@ export const properties = [
     address: "20, Example Street, City 20, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "duplex",
+    location: "lagos",
+    type: "buy",
   },
   {
     id: 21,
@@ -336,6 +395,9 @@ export const properties = [
     address: "21, Example Street, City 21, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "duplex",
+    location: "kogi",
+    type: "buy",
   },
   {
     id: 22,
@@ -344,6 +406,9 @@ export const properties = [
     address: "22, Example Street, City 22, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "duplex",
+    location: "kogi",
+    type: "buy",
   },
   {
     id: 23,
@@ -352,6 +417,9 @@ export const properties = [
     address: "23, Example Street, City 23, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "2-storey",
+    location: "lagos",
+    type: "buy",
   },
   {
     id: 24,
@@ -360,6 +428,9 @@ export const properties = [
     address: "24, Example Street, City 24, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "duplex",
+    location: "lagos",
+    type: "buy",
   },
   {
     id: 25,
@@ -368,5 +439,8 @@ export const properties = [
     address: "25, Example Street, City 25, Country",
     features: ["beds", "baths", "park"],
     image: "/property.svg",
+    propertyType: "2-storey",
+    location: "kogi",
+    type: "buy",
   },
 ];

@@ -1,9 +1,9 @@
-import { Box, Typography, Grid } from "@mui/material";
-import React from "react";
-import { Colors } from "../colors";
-import PropertyDisplay from "../shared/Card";
-import Button from "../shared/Button";
-import { properties } from "../mockData";
+import { Box, Typography, Grid } from '@mui/material';
+import React from 'react';
+import { Colors } from '../colors';
+import PropertyDisplay from '../shared/Card';
+import Button from '../shared/Button';
+import { properties } from '../mockData';
 
 const PopularProject = () => {
   return (
@@ -11,38 +11,33 @@ const PopularProject = () => {
       sx={{
         backgroundColor: Colors.White,
         backgroundImage:
-          "radial-gradient(circle, rgba(128,114,207,1) 0%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%)",
+          'radial-gradient(circle, rgba(128,114,207,1) 0%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%)',
       }}
     >
       <Box
         sx={{
-          width: { xs: "90%", md: "85%" },
-          marginInline: { xs: "auto", md: "auto" },
-
-          //   backgroundImage:
-          //     "radial-gradient(circle, rgba(110,93,207,1) 0%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%)",
-          //   border: "2px solid red"
+          width: { xs: '90%', md: '85%' },
+          marginInline: { xs: 'auto', md: 'auto' },
         }}
       >
-        <Box sx={{ padding: "3rem 0 4rem" }}>
+        <Box sx={{ padding: '3rem 0 4rem' }}>
           <Box
             sx={{
               color: Colors.BackroundOrTitle,
-              textAlign: "center",
-              marginBottom: "3rem",
+              textAlign: 'center',
+              marginBottom: '3rem',
             }}
           >
-            <Typography variant="h6" marginBottom={"1rem"}>
+            <Typography variant='h6' marginBottom={'1rem'}>
               POPULAR PROPERTY
             </Typography>
-            <Typography variant="h4">
+            <Typography variant='h4'>
               We have our most searched property
             </Typography>
           </Box>
           <Grid
             container
-            // gap={7}
-            justifyContent="space-between"
+            justifyContent='space-between'
             rowGap={6}
             sx={{ columnGap: { sm: 0.5 } }}
           >
@@ -56,10 +51,10 @@ const PopularProject = () => {
           </Grid>
           <Box
             sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              margin: "3rem 0",
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              margin: '3rem 0',
             }}
           >
             <Button>Get Started</Button>

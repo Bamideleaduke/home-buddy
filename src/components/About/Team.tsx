@@ -37,7 +37,6 @@ const Team = () => {
       >
         <Grid
           container
-          // gap={7}
           justifyContent="space-between"
           rowGap={6}
           sx={{ columnGap: { sm: 0.5 } }}

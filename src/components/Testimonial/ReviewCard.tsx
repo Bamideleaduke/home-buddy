@@ -46,7 +46,6 @@ const ReviewCard = () => {
       </Typography>
       <Box
         sx={{
-          // border: "2px solid yellow",
           display: "flex",
           alignItems: "left",
           marginTop: "1rem",
@@ -57,7 +56,6 @@ const ReviewCard = () => {
           defaultValue={5.5}
           precision={0.5}
           readOnly
-          // sx={{ border: "2px solid red" }}
           size="small"
         />
       </Box>

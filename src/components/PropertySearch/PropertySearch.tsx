@@ -18,15 +18,18 @@ const rangeOptions = [
   { label: "2-4 Million", value: "2-4Million" },
   { label: "5-10 Million", value: "5-10Million" },
 ];
-const PropertySearch = () => {
+interface PropertySearchProps {
+  onSearch?: (filters: { location: string; propertyType: string; range: string }) => void;
+}
+
+const PropertySearch: React.FC<PropertySearchProps> = ({ onSearch }) => {
   const [location, setLocation] = useState("");
   const [propertyType, setPropertyType] = useState("");
   const [range, setRange] = useState("");
   return (
     <Box
       sx={{
-        // width: "100%",
-        // height: "auto",
+      
         backgroundColor: "#fff",
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
@@ -41,7 +44,6 @@ const PropertySearch = () => {
       <Box sx={{ width: "100%" }}>
         <Typography>Location</Typography>
         <CustomSelect
-          // name="location"
           label=""
           onChange={(e) => setLocation(e.target.value)}
           options={locationOptions}
@@ -52,7 +54,6 @@ const PropertySearch = () => {
       <Box sx={{ width: "100%" }}>
         <Typography>Property Type</Typography>
         <CustomSelect
-          // name="location"
           label=""
           onChange={(e) => setPropertyType(e.target.value)}
           options={propertyTypeOptions}
@@ -82,6 +83,11 @@ const PropertySearch = () => {
             borderRadius: "0",
             padding: 0,
             minWidth: "30px",
+          }}
+          onClick={() => {
+            if (onSearch) {
+              onSearch({ location, propertyType, range });
+            }
           }}
         >
           <Image src="/search.svg" alt="search icon" width="15" height="15" />

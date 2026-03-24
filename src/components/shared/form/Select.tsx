@@ -29,7 +29,6 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
         id={`${label}-select`}
         value={value ? String(value) : ""}
         onChange={onChange}
-        // autoWidth
         label={label}
       >
         <MenuItem value="">

@@ -9,13 +9,16 @@ const PropertyDisplay = ({ data }: any) => {
   return (
     <Box
       sx={{
-        // border: "2px solid red",
         width: "100%",
         backgroundColor: Colors.OffWhite,
         padding: "1rem",
         borderRadius: "10px",
       }}
-      onClick={() => router.push(`/properties/${data.id}`)}
+      onClick={() => {
+        const isDashboard = router.pathname.startsWith("/user/");
+        const routePath = isDashboard ? `/user/property-listing/${data.id}` : `/properties/${data.id}`;
+        router.push(routePath);
+      }}
     >
       <Box>
         <Box
@@ -24,7 +27,6 @@ const PropertyDisplay = ({ data }: any) => {
           alt={data?.title}
           sx={{ width: "100%" }}
         />
-        {/* <Image src="/property.svg" alt="Logo" width="100" height="100" /> */}
       </Box>
 
       <Box>

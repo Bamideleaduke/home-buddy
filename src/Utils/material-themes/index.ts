@@ -1,6 +1,6 @@
-import { Colors } from "@/components/colors";
-import { createTheme } from "@mui/material";
-import { deepmerge } from "@mui/utils";
+import { Colors } from '@/components/colors';
+import { createTheme } from '@mui/material';
+import { deepmerge } from '@mui/utils';
 
 const materialTheme = createTheme();
 
@@ -41,12 +41,11 @@ export const GlobalTheme = createTheme(
       body1: {
         fontWeight: 500,
         fontSize: materialTheme.typography.pxToRem(16),
-       
       },
       body2: {
         fontWeight: 400,
         fontSize: materialTheme.typography.pxToRem(14),
-        color:Colors.TextGray,
+        color: Colors.TextGray,
       },
       caption: {
         fontWeight: 400,
@@ -57,43 +56,29 @@ export const GlobalTheme = createTheme(
         fontSize: materialTheme.typography.pxToRem(12),
       },
       fontFamily: [
-        "Poppins",
-        "-apple-system",
-        "BlinkMacSystemFont",
+        'Poppins',
+        '-apple-system',
+        'BlinkMacSystemFont',
         '"Segoe UI"',
-        "Roboto",
+        'Roboto',
         '"Helvetica Neue"',
-        "Arial",
-        "sans-serif",
+        'Arial',
+        'sans-serif',
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
-      ].join(","),
+      ].join(','),
     },
     palette: {
       primary: {
-        main: "#3c0c4f",
+        main: '#3c0c4f',
       },
       secondary: {
-        main: "#ff8400",
+        main: '#ff8400',
       },
       background: {
-        default: "#f3e9f7",
+        default: '#f3e9f7',
       },
     },
-    // palette: {
-    //   primary: {
-    //     main: Colors.Secondary,
-    //   },
-    //   secondary: {},
-    //   text: { primary: Colors.Primary },
-    //   success: {
-    //     main: Colors.Success,
-    //   },
-    //   gray: {},
-    //   info: {
-    //     main: Colors.Info,
-    //   },
-    // },
-  })
+  }),
 );

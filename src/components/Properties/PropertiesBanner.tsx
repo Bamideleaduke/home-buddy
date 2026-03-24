@@ -22,7 +22,6 @@ const PropertiesBanner = () => {
       sx={{
         backgroundColor: "#fff",
         width: "100%",
-        // border: "4px solid red",
         paddingTop: "3rem",
         padding: { xs: "3rem 1rem" },
       }}
@@ -31,7 +30,6 @@ const PropertiesBanner = () => {
         <Box
           sx={{
             width: { xs: "90%", md: "85%" },
-            // border: "2px solid yellow",
             margin: { xs: "0 auto", md: "2rem auto" },
             position: "relative",
           }}
@@ -50,8 +48,7 @@ const PropertiesBanner = () => {
                   boxShadow: "6",
                   width: { xs: "90%", xl: "80%" },
                   marginInline: "auto",
-                  // opacity: "80%",
-                  // backdropFilter: "blur(10px)",
+                  
                   borderRadius: "20px",
                   padding: { xs: "12px 22px", md: "24px 44px" },
                 }}

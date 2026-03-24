@@ -10,22 +10,16 @@ const AboutHero = () => {
       sx={{
         backgroundColor: "#fff",
         width: "100%",
-        // height: { sm: "50vh", md: "80vh" },
-        // border: "4px solid red",
+     
         paddingTop: "3rem",
         padding: { xs: "3rem 1rem" },
-        // boxSizing: "border-box",
-        // display: "flex",
-        // flexDirection: "column",
-        // justifyContent: "space-between",
+     
       }}
     >
       <Box
         sx={{
           width: { xs: "90%", md: "85%" },
-          // border: "2px solid red",
           margin: { xs: "0 auto", md: "2rem auto" },
-          // height: { xs: "90%", md: "100%" },
         }}
       >
         <Typography
@@ -39,16 +33,12 @@ const AboutHero = () => {
         </Typography>
         <Box
           sx={{
-            // border: "4px solid blue",
             width: "100%",
-            // height: "100%",
             display: "flex",
-            // display: { xs: "initial", md: "flex" },
             flexDirection: { xs: "column-reverse", md: "row" },
             justifyContent: "space-between",
             alignItems: "center",
 
-            // boxSizing: "border-box",
           }}
         >
           <Box sx={{ flexBasis: "50%" }}>
@@ -58,7 +48,6 @@ const AboutHero = () => {
                 textAlign: "left",
                 fontSize: { md: "24px" },
                 width: { md: "500px" },
-                //   margin: { xs: "1.5rem 0", md: "1.5rem 0" },
               }}
             >
               At Homebuddy, we are passionate about helping you find your
@@ -82,7 +71,6 @@ const AboutHero = () => {
           </Box>
           <Box
             sx={{
-              // border: "4px solid green",
               flexBasis: "50%",
               display: { xs: "initial", md: "flex" },
               justifyContent: "right",
@@ -92,7 +80,6 @@ const AboutHero = () => {
               sx={{
                 width: { xs: "100%", md: "350px" },
                 height: "400px",
-                // border: "3px solid red",
                 margin: { xs: "2rem 0", md: "" },
               }}
             >

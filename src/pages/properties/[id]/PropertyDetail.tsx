@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { properties } from "@/components/mockData";
 import BackgroundTemplate from "@/components/shared/Temp/BackgroundTemplate";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -18,7 +17,6 @@ import DescriptionAndReview from "@/components/DescriptionAndReview/DescriptionA
 const PropertyDetail = () => {
   const [selectedProperty, setSelectedProperty] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  const [loadingImage, setLoadingImage] = useState(true);
   const router = useRouter();
   const { id } = router.query;
 
@@ -133,7 +131,6 @@ const PropertyDetail = () => {
             height: "100%",
             columnGap: "5px",
             justifyContent: "space-between",
-            // alignItems: "stretch",
           }}
         >
           {selectedProperty?.propImg &&
@@ -141,13 +138,6 @@ const PropertyDetail = () => {
               return (
                 <React.Fragment key={item.id}>
                   <Grid item xs={5.8}>
-                    {/* <Image
-                    src={item.propFront}
-                    alt="propFront"
-                    layout="responsive"
-                    width={100}
-                    height={100}
-                  /> */}
                     <Box
                       component="img"
                       src={item?.propFront}
@@ -202,7 +192,6 @@ const PropertyDetail = () => {
           variant="h4"
           sx={{
             color: Colors.BackroundOrTitle,
-            // fontSize:{md:""},
             fontWeight: "700",
             marginBottom: "2rem",
           }}
@@ -214,7 +203,6 @@ const PropertyDetail = () => {
             width: "100%",
             height: "100%",
             backgroundColor: "#fff",
-            // maxHeight: { md: "276px" },
             padding: { xs: "1.5rem", md: "3rem" },
             borderRadius: "16px",
           }}
@@ -222,7 +210,6 @@ const PropertyDetail = () => {
           <Box
             sx={{
               width: "100%",
-              // height: "100%",
               maxHeight: { md: "276px" },
               display: "flex",
               flexDirection: { xs: "column", md: "row" },

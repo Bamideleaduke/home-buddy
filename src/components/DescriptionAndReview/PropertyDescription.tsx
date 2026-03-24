@@ -1,11 +1,16 @@
 import { Box, Typography } from "@mui/material";
-import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { Dayjs } from "dayjs";
 import { Colors } from "../colors";
 import { Styles } from "../GlobalStyles";
 import Button from "../shared/Button";
 
 const PropertyDescription = () => {
+  const [tourDate, setTourDate] = useState<Dayjs | null>(null);
+
   return (
     <Box
       sx={{
@@ -99,7 +104,6 @@ const PropertyDescription = () => {
         </Box>
       </Box>
       <Box sx={{ flexBasis: "30%", paddingTop: { md: "2rem" } }}>
-        {/* sales */}
         <Box
           sx={{
             border: `2px solid ${Colors.lilacBorder}`,
@@ -128,11 +132,9 @@ const PropertyDescription = () => {
             Sign in to buy
           </Button>
         </Box>
-        {/* agents */}
 
         <Box
           sx={{
-            // border: `2px solid ${Colors.lilacBorder}`,
             padding: { xs: "1rem", sm: "2rem", md: "1.5rem" },
             borderRadius: "8px",
             boxShadow: "2",
@@ -248,22 +250,26 @@ const PropertyDescription = () => {
             </Box>
           </Box>
 
-          <Box>
-            <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <Box
-                component="img"
-                src="/icons/calenda.svg"
-                alt="calenda"
-                sx={{ width: "15px", height: "15px" }}
+          <Box sx={{ mt: 3, mb: 2 }}>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DatePicker
+                label="Select a tour date"
+                value={tourDate}
+                onChange={(newValue) => setTourDate(newValue)}
+                sx={{ width: "100%" }}
               />
-              <Typography sx={{ color: Colors.TextGray }}>
-                Select a tour date
-              </Typography>
-            </Box>
+            </LocalizationProvider>
           </Box>
           <Button
             variant="outlined"
-            sx={{ width: "100%", borderRadius: "8px", marginTop: "1.5rem" }}
+            sx={{ width: "100%", borderRadius: "8px", marginTop: "1rem" }}
+            onClick={() => {
+              if (tourDate) {
+                alert(`Tour successfully requested for: ${tourDate.format('MMM D, YYYY')}`);
+              } else {
+                alert('Please select a tour date first');
+              }
+            }}
           >
             Request tour
           </Button>
@@ -304,7 +310,6 @@ const Features = ({ title, value }: any) => {
 
           <Box
             sx={{
-              //   width: "100%",
               flexGrow: 1,
               height: "1px",
               borderBottom: `3px dotted ${Colors.TextGray}`,
@@ -329,7 +334,6 @@ const DetailsComponent: React.FC<DetailProp> = ({ title, icon, value }) => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          // justifyContent: "center",
           alignItems: "center",
         }}
       >
@@ -338,7 +342,6 @@ const DetailsComponent: React.FC<DetailProp> = ({ title, icon, value }) => {
         </Typography>
 
         <Box sx={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          {/* <Image src={"/icons/bed.svg"} alt="bed" width={20} height={20} /> */}
           <Box
             component="img"
             src={icon}
