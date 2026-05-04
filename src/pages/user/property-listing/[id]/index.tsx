@@ -74,7 +74,7 @@ export default function DashboardPropertyDetail() {
           variant='h6'
           sx={{ color: Colors.BackroundOrTitle, fontWeight: 700 }}
         >
-          {property.title}
+          {property?.title}
         </Typography>
       </Typography>
     </Box>
@@ -100,10 +100,12 @@ export default function DashboardPropertyDetail() {
           backgroundColor: Colors.BackroundOrTitle,
         }}
       >
-        {property.type === 'buy' ? 'Buy this property' : 'Rent this property'}
+        {property?.type === 'buy' ? 'Buy this property' : 'Rent this property'}
       </Button>
     </Box>
   );
+
+  if (!property) return null;
 
   return (
     <DashboardLayout title=''>
@@ -148,7 +150,7 @@ export default function DashboardPropertyDetail() {
               >
                 <Box
                   component='img'
-                  src={property.propImg?.[0]?.propFront || property.image}
+                  src={property?.propImg?.[0]?.propFront || property?.image}
                   sx={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </Box>
@@ -163,7 +165,7 @@ export default function DashboardPropertyDetail() {
                 <Box sx={{ flex: 1, borderRadius: '12px', overflow: 'hidden' }}>
                   <Box
                     component='img'
-                    src={property.propImg?.[0]?.propSide || property.image}
+                    src={property?.propImg?.[0]?.propSide || property?.image}
                     sx={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </Box>
@@ -179,7 +181,7 @@ export default function DashboardPropertyDetail() {
                 >
                   <Box
                     component='img'
-                    src={property.propImg?.[0]?.propInside || property.image}
+                    src={property?.propImg?.[0]?.propInside || property?.image}
                     sx={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                   <Box
@@ -279,15 +281,15 @@ export default function DashboardPropertyDetail() {
                           mr: 2,
                         }}
                       >
-                        {currencyConverter(property.price)}
+                        {currencyConverter(property?.price)}
                       </Typography>
-                      {property.features?.map((f: string) => (
+                      {property?.features?.map((f: string) => (
                         <FeatureTag key={f} text={f} />
                       ))}
                     </Box>
 
                     <Typography sx={{ fontWeight: 500, mb: 4 }}>
-                      {property.address}
+                      {property?.address}
                     </Typography>
 
                     <Typography variant='h6' sx={{ fontWeight: 700, mb: 1 }}>
@@ -584,7 +586,7 @@ export default function DashboardPropertyDetail() {
               <Grid item xs={12} md={6}>
                 <Box
                   component='img'
-                  src={property.propImg?.[0]?.propInside || property.image}
+                  src={property?.propImg?.[0]?.propInside || property?.image}
                   sx={{
                     width: '100%',
                     height: '350px',
@@ -596,7 +598,7 @@ export default function DashboardPropertyDetail() {
               <Grid item xs={12} md={6}>
                 <Box
                   component='img'
-                  src={property.propImg?.[0]?.propFront || property.image}
+                  src={property?.propImg?.[0]?.propFront || property?.image}
                   sx={{
                     width: '100%',
                     height: '350px',
@@ -608,7 +610,7 @@ export default function DashboardPropertyDetail() {
               <Grid item xs={12} md={6}>
                 <Box
                   component='img'
-                  src={property.propImg?.[0]?.propSide || property.image}
+                  src={property?.propImg?.[0]?.propSide || property?.image}
                   sx={{
                     width: '100%',
                     height: '350px',
@@ -620,7 +622,7 @@ export default function DashboardPropertyDetail() {
               <Grid item xs={12} md={6}>
                 <Box
                   component='img'
-                  src={property.propImg?.[0]?.propInside || property.image}
+                  src={property?.propImg?.[0]?.propInside || property?.image}
                   sx={{
                     width: '100%',
                     height: '350px',
@@ -640,7 +642,7 @@ export default function DashboardPropertyDetail() {
               <Grid item xs={12} md={6}>
                 <Box
                   component='img'
-                  src={property.propImg?.[0]?.propFront || property.image}
+                  src={property?.propImg?.[0]?.propFront || property?.image}
                   sx={{
                     width: '100%',
                     height: '350px',
@@ -652,7 +654,7 @@ export default function DashboardPropertyDetail() {
               <Grid item xs={12} md={6}>
                 <Box
                   component='img'
-                  src={property.propImg?.[0]?.propSide || property.image}
+                  src={property?.propImg?.[0]?.propSide || property?.image}
                   sx={{
                     width: '100%',
                     height: '350px',
