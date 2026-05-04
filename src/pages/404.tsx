@@ -23,8 +23,8 @@ export default function NotFound() {
 
         {/* Description */}
         <p className='text-sm text-gray-500 mb-8 leading-relaxed'>
-          Oops! It seems we've lost this page. The link may be broken, or the
-          page may have been removed.
+          Oops! It seems we&apos;ve lost this page. The link may be broken, or
+          the page may have been removed.
         </p>
 
         <Link
